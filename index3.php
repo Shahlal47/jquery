@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Example</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.js"></script>
+
+    <style>
+        #div2{
+            display: none;
+        }
+        #up{
+            display: none;
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+
+<section class="container">
+    <button>Click Me To Show Document</button>
+    <h1>Md. Shahlal Hossain</h1>
+</section>
+
+
+<section class="container" id="div2">
+    <div class="well">
+        <button id="down">Go Down</button>
+        <h1 id="hello">Hello World</h1>
+        <p>
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+            I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph I am a Paragraph
+        </p>
+        <button class="pull-right" id="up">Go Back</button>
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('button').click(function(){
+            $('h1').addClass("well");
+            $('#div2').show();
+
+        });
+
+        $('#down').click(function(){
+           $('#div2').animate({'margin':'200px','margin-left':'100px'}, 2000);
+            $('#up').show();
+        });
+
+        $('#up').click(function(){
+            $('#div2').animate({'margin':'30px','margin-right':'100px'}, 2000);
+        });
+    });
+</script>
+
+
+</body>
+</html>
